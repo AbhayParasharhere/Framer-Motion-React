@@ -1,8 +1,22 @@
-import React from 'react'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const Box2 = () => {
   return (
-    <div>Box2</div>
+    <div className="box-container">
+      <motion.div
+        className="box"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        drag
+        dragConstraints={{
+          top: 30,
+          bottom: 10,
+          right: 20,
+          left: -20,
+        }}
+      ></motion.div>
+    </div>
   )
 }
 
